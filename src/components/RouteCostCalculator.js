@@ -16,7 +16,7 @@ const RouteCostCalculator = ({ graph }) => {
     <>
       <h2>Calculate Route Cost</h2>
       <Form.Item label="Enter the route e.g. (AD, EACF)">
-        <Input style={{ width: 200 }} value={deliveryRoute} onChange={e => setDeliveryRoute(e.target.value)}/>
+        <Input style={{ width: 200 }} value={deliveryRoute} onChange={e => setDeliveryRoute(e.target.value.toUpperCase())}/>
       </Form.Item>
       <Button onClick={calculate}>Calculate</Button>
       {routeCost && <h1>Total Cost: {routeCost}</h1>}

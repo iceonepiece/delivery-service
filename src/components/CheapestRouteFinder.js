@@ -17,10 +17,10 @@ const CheapestRouteFinder = ({ graph }) => {
     <>
       <h2>Find Cheapest Route</h2>
       <Form.Item label="From">
-        <Input style={{ width: 200 }} value={from} onChange={e => setFrom(e.target.value)}/>
+        <Input style={{ width: 200 }} value={from} onChange={e => setFrom(e.target.value.toUpperCase())}/>
       </Form.Item>
       <Form.Item label="To">
-        <Input style={{ width: 200 }} value={to} onChange={e => setTo(e.target.value)}/>
+        <Input style={{ width: 200 }} value={to} onChange={e => setTo(e.target.value.toUpperCase())}/>
       </Form.Item>
       <Button onClick={find}>Calculate</Button>
       {cheapestRoute && <h1>Cheapest Cost: {cheapestRoute.cost}</h1>}
